@@ -33,7 +33,6 @@ jobs:
         run: |
           git config --global user.name Timothe-Magne
           git config --global user.email timothe.magne@gmail.com
-          git add Q3_archive_XYZ.txt 
-          git commit -m "Mise a jour de une Q3_archive_XYZ"
-          git pull --rebase
+          git add "${ARCHIVE_NOM}"
+          git commit -m "Ajout de ${ARCHIVE_NOM}"
           git push
