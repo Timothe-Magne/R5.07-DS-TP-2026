@@ -1,5 +1,5 @@
 Timothe Magne
-Fri Nov 20 13:41:45 UTC 2026
-Ceci est le DS 
+Fri Nov 20 13:46:13 UTC 2026
+Ceci est le DS .
 
-Taille de XYZ.txt : 16 octets
+Taille de XYZ.txt : 17 octets
