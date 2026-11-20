@@ -3,9 +3,6 @@ run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 permissions:
   contents: write
-concurrency:
-  group: git-push-${{ github.ref }}
-  cancel-in-progress: false
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
@@ -32,4 +29,5 @@ jobs:
           git config --global user.email timothe.magne@gmail.com
           git add Q3_archive_XYZ.txt 
           git commit -m "Mise a jour de une Q3_archive_XYZ"
+          git pull --rebase
           git push
