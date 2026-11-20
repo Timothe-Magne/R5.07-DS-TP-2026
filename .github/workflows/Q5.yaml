@@ -18,10 +18,10 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
-      - name: workflow4
+      - name: workflow5
         run: |
           DATE_JJ_MM_AAAA=$(date +'%d-%m-%Y')
-          ARCHIVE_NOM="Q4_archive_${DATE_JJ_MM_AAAA}.txt"
+          ARCHIVE_NOM="Q5_archive_${DATE_JJ_MM_AAAA}.txt"
 
           {
             echo "Timothe Magne"
