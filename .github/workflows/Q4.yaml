@@ -28,6 +28,7 @@ jobs:
             echo ""
             cat Q4.java
           } > "$ARCHIVE_NOM"
+          echo "ARCHIVE_NOM=$ARCHIVE_NOM" >> "$GITHUB_ENV"
       # push
       - name: XXX commmit et push
         run: |
