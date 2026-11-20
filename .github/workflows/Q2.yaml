@@ -3,6 +3,9 @@ run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 permissions:
   contents: write
+concurrency:
+  group: git-push-${{ github.ref }}
+  cancel-in-progress: false
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
