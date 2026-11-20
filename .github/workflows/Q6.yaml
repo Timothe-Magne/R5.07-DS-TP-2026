@@ -23,6 +23,7 @@ jobs:
           DATE_STAMP=$(date +'%d-%m-%Y-%H%M%S')
           ARCHIVE_NOM="Q6_archive_${DATE_STAMP}.txt"
           PREV_ARCHIVE=$(ls -1 Q6_archive_*.txt 2>/dev/null | sort | tail -n 1 || true)
+
           {
             echo "Timothe Magne"
             echo ""
@@ -42,7 +43,9 @@ jobs:
               echo "premier fichier"
             fi
           } > "Q6_différences.txt"
-      # push
+
+          echo "ARCHIVE_NOM=$ARCHIVE_NOM" >> "$GITHUB_ENV"
+
       - name: XXX commmit et push
         run: |
           git config --global user.name Timothe-Magne
