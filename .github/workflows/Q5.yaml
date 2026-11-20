@@ -1,0 +1,39 @@
+name: Exercice 5
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: [push]
+permissions:
+  contents: write
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
+      - run: echo "🖥 The workflow is now ready to test your code on the runner."
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
+      - run: echo "🍏 This job's status is ${{ job.status }}."
+      - name: workflow4
+        run: |
+          DATE_JJ_MM_AAAA=$(date +'%d-%m-%Y')
+          ARCHIVE_NOM="Q4_archive_${DATE_JJ_MM_AAAA}.txt"
+
+          {
+            echo "Timothe Magne"
+            echo ""
+            cat Q5.java
+          } > "$ARCHIVE_NOM"
+          echo "ARCHIVE_NOM=$ARCHIVE_NOM" >> "$GITHUB_ENV"
+      # push
+      - name: XXX commmit et push
+        run: |
+          git config --global user.name Timothe-Magne
+          git config --global user.email timothe.magne@gmail.com
+          git add "${ARCHIVE_NOM}"
+          git commit -m "Ajout de ${ARCHIVE_NOM}"
+          git push
