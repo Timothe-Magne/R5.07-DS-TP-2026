@@ -19,7 +19,7 @@ jobs:
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - name: workflow1
-        run: XYZ.txt > Q1_archive_XYZ.txt
+        run: XYZ.txt >> Q1_archive_XYZ.txt
       # push
       - name: XXX commmit et push
         run: |
