@@ -21,7 +21,7 @@ jobs:
       - name: workflow2
         run: | 
             date > Q2_archive_XYZ.txt
-            'Timothe magne' > Q2_archive_XYZ.txt
+            printf 'Timothe magne' > Q2_archive_XYZ.txt
              cat XYZ.txt > Q2_archive_XYZ.txt
       # push
       - name: XXX commmit et push
